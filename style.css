@@ -8,10 +8,8 @@
 /* 关闭按钮样式 */
 #quick-reply-close-button {
     position: fixed;
-    /* left: 50%; */
-    /* transform: translateX(-50%); */
-    left: calc(50% - 55px); /* 大约移动半个按钮宽度+间隙 */
-    transform: translateX(-50%); /* 微调以按钮右边缘为中心 */
+    left: calc(50% - 60px); /* 调整为中心点左侧固定距离 */
+    transform: translateX(-50%); /* 以按钮中心为基准 */
     top: 150px;
     z-index: 1002;
     background-color: rgba(180, 0, 0, 0.8);
@@ -22,7 +20,7 @@
     cursor: pointer;
     font-size: 14px;
     transition: background-color 0.3s;
-    display: none; /* 初始隐藏 */
+    display: none;
     white-space: nowrap;
 }
 #quick-reply-close-button:hover {
@@ -32,10 +30,10 @@
 /* 新增：主题切换按钮样式 */
 #quick-reply-theme-toggle-button {
     position: fixed;
-    left: calc(50% + 5px);
-    transform: translateX(0);
+    left: calc(50% + 60px); /* 调整为中心点右侧相同距离 */
+    transform: translateX(-50%); /* 以按钮中心为基准，与关闭按钮保持一致 */
     top: 150px;
-    z-index: 1002; /* 确保z-index足够高 */
+    z-index: 1002;
     background-color: rgba(0, 80, 180, 0.8);
     color: white;
     border: 1px solid #444;
@@ -44,10 +42,10 @@
     cursor: pointer;
     font-size: 14px;
     transition: background-color 0.3s;
-    display: none; /* 初始隐藏 */
+    display: none;
     white-space: nowrap;
-    visibility: visible; /* 确保可见性设置正确 */
-    opacity: 1; /* 确保不透明 */
+    visibility: visible;
+    opacity: 1;
 }
 #quick-reply-theme-toggle-button:hover {
     background-color: rgba(0, 100, 220, 0.9);
