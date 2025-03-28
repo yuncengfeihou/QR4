@@ -82,7 +82,7 @@ function showQuickReplyMenu() {
 
     const menu = document.getElementById('quick-reply-menu');
     const closeButton = document.getElementById('quick-reply-close-button');
-    const themeToggleButton = document.getElementById('quick-reply-theme-toggle-button'); // 获取切换按钮
+    const themeToggleButton = document.getElementById('quick-reply-theme-toggle-button');
 
     if (dataNeedsUpdate) {
         console.log('Fetching quick replies...');
@@ -95,8 +95,9 @@ function showQuickReplyMenu() {
     renderQuickReplies();
 
     menu.style.display = 'block';
-    closeButton.style.display = 'block'; // 显示关闭按钮
-    themeToggleButton.style.display = 'block'; // 显示切换按钮
+    closeButton.style.display = 'block';
+    themeToggleButton.style.display = 'block'; // 确保这行代码执行
+    console.log('Theme toggle button display:', themeToggleButton.style.display); // 添加调试日志
     menuVisible = true;
 }
 
